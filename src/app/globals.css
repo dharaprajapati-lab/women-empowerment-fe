@@ -1,0 +1,172 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-playfair);
+  --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+  /* Custom warm palette */
+  --color-warm-50: #fdf8f3;
+  --color-warm-100: #f9ede0;
+  --color-warm-200: #f0d4b8;
+  --color-warm-300: #e4b48a;
+  --color-warm-400: #d48e57;
+  --color-warm-500: #c4722a;
+  --color-warm-600: #a85c1f;
+  --color-warm-700: #8b4513;
+  --color-warm-800: #6e340d;
+  --color-warm-900: #4a2208;
+  --color-maroon-50: #fdf2f4;
+  --color-maroon-100: #fce7ea;
+  --color-maroon-200: #f9c9d0;
+  --color-maroon-300: #f497a6;
+  --color-maroon-400: #ec5f75;
+  --color-maroon-500: #df3050;
+  --color-maroon-600: #c01e3d;
+  --color-maroon-700: #8b2635;
+  --color-maroon-800: #7a2130;
+  --color-maroon-900: #62192a;
+  --color-gold-400: #e9b84a;
+  --color-gold-500: #c9921a;
+  --color-gold-600: #a67714;
+}
+
+:root {
+  --background: #fbf4f1;
+  --foreground: #170d08;
+  --card: #fff8f5;
+  --card-foreground: #170d08;
+  --popover: #fff8f5;
+  --popover-foreground: #170d08;
+  --primary: #9f2f1f;
+  --primary-foreground: #fff8f5;
+  --secondary: #f8e5df;
+  --secondary-foreground: #170d08;
+  --muted: #f6e8e3;
+  --muted-foreground: #675953;
+  --accent: #c97a45;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #e7cfc7;
+  --input: #e7cfc7;
+  --ring: #9f2f1f;
+  --radius: 0.5rem;
+  --sidebar: #fbf4f1;
+  --sidebar-foreground: #170d08;
+  --sidebar-primary: #9f2f1f;
+  --sidebar-primary-foreground: #fff8f5;
+  --sidebar-accent: #f8e5df;
+  --sidebar-accent-foreground: #170d08;
+  --sidebar-border: #e7cfc7;
+  --sidebar-ring: #9f2f1f;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-inter), Arial, sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-playfair), Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient-warm {
+    background: linear-gradient(135deg, #8b2635 0%, #c9921a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(to right,
+        rgba(45, 27, 14, 0.80) 0%,
+        rgba(45, 27, 14, 0.40) 60%,
+        rgba(45, 27, 14, 0.10) 100%);
+  }
+
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(139, 38, 53, 0.12);
+  }
+
+  .nav-link-underline {
+    position: relative;
+  }
+
+  .nav-link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #8b2635;
+    transition: width 0.3s ease;
+  }
+
+  .nav-link-underline:hover::after {
+    width: 100%;
+  }
+
+  .section-divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #8b2635, #c9921a);
+    border-radius: 2px;
+  }
+}
