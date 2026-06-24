@@ -234,8 +234,8 @@ export default function HomePage() {
                   </h3>
 
                   <p className="mt-3 max-w-[310px] text-[13px] leading-6 text-white/80">
-                    We partner with local organizations to bring impactful
-                    ideas to life.
+                    We partner with local organizations to bring impactful ideas
+                    to life.
                   </p>
 
                   <Link
