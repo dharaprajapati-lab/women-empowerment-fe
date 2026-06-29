@@ -5,31 +5,46 @@ import {
   Droplet,
   GraduationCap,
   Lightbulb,
+  MapPin,
   Sprout,
   Users,
 } from "lucide-react";
 
 const impactStats = [
   {
-    value: "10k+",
-    label: "Lives Touched",
+    value: "4,29,500+",
+    label: "Lives Impacted",
     icon: Users,
   },
   {
-    value: "50+",
-    label: "Villages Covered",
+    value: "220+",
+    label: "Institutions",
     icon: Building2,
   },
   {
-    value: "120",
-    label: "Schools Built",
-    icon: GraduationCap,
+    value: "7+",
+    label: "States",
+    icon: MapPin,
   },
-  {
-    value: "300",
-    label: "Clean Water Projects",
-    icon: Droplet,
-  },
+];
+
+const partners = [
+  "SGT University, Gurugram",
+  "Waste Managers Multistate Co-op Ltd. (WAMMCO)",
+  "Sewa Nyaya Utthaan Foundation",
+  "Dr. Ambedkar Jankalyan Samiti",
+  "National Medicos Organisation (NMO)",
+  "Advanced Study Institute of ASIA (ASIA)",
+  "Aarogya Bharti",
+  "Yuva Manch",
+  "British Ravidassia Heritage Foundation",
+  "United Nobel Human Rights Committee",
+  "Shanti Suraksha aur Sadbhav Trust",
+  "Bharatiya Railway Mall Godam Shramik Union (BRMGSU)",
+  "Jeewanti Sewa Samiti",
+  "IGEP TRUST",
+  "Pathway Global",
+  "Foundation for Integrated Support and Solution (FISS)"
 ];
 
 const insights = [
@@ -143,7 +158,7 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-6 sm:grid-cols-3">
             {impactStats.map(({ value, label, icon: Icon }) => (
               <div
                 key={label}
@@ -358,6 +373,27 @@ export default function HomePage() {
                 </span>
               </div>
             </Link>
+          </div>
+        </div>
+      </section>
+      {/* Partnerships */}
+      <section className="bg-white px-5 py-24 sm:px-8 md:py-28">
+        <div className="mx-auto max-w-[1220px]">
+          <div className="mb-9 text-center">
+            <h2 className="text-[30px] font-medium tracking-[-0.025em] text-[#140b07]">
+              Partnerships & Collaborations
+            </h2>
+            <p className="mt-2 text-[14px] text-[#675953]">
+              CSR & Institutional Partners driving our mission forward.
+            </p>
+          </div>
+          
+          <div className="flex flex-wrap justify-center gap-4">
+            {partners.map((partner) => (
+              <div key={partner} className="rounded-full bg-[#fbf4f1] border border-[#e2c8bf] px-6 py-3 text-[13px] font-medium text-[#24140d]">
+                {partner}
+              </div>
+            ))}
           </div>
         </div>
       </section>

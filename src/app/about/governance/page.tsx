@@ -14,9 +14,9 @@ import {
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Governance | WAMMCO",
+  title: "Governance | NAMO Foundation",
   description:
-    "Learn about WAMMCO's governance, accountability, compliance, and transparency practices.",
+    "Learn about NAMO Foundation's governance, accountability, compliance, and transparency practices.",
 };
 
 const principles = [
@@ -42,23 +42,23 @@ const principles = [
   },
 ];
 
-const registrations = [
-  {
-    title: "12A Registration",
-    desc: "Recognized charitable registration for nonprofit operations.",
-  },
-  {
-    title: "80G Certification",
-    desc: "Eligible donations receive applicable tax benefits as per law.",
-  },
-  {
-    title: "FCRA Approved",
-    desc: "Authorized to receive eligible foreign contributions.",
-  },
-  {
-    title: "ISO 9001:2015",
-    desc: "Quality management standards for organizational systems.",
-  },
+const corporateRegistrations = [
+  { label: "CIN", value: "U88900DL2025NPL448860" },
+  { label: "MCA Registration No.", value: "448860" },
+  { label: "Section 8 Licence No.", value: "168967" },
+  { label: "PAN", value: "AAKCN5013B" },
+  { label: "TAN", value: "DELN30583A" },
+  { label: "GSTIN", value: "07AAKCN5013B1ZW" },
+];
+
+const regulatoryRegistrations = [
+  { label: "CSR-1 Registration", value: "CSR00106838" },
+  { label: "12A Registration", value: "AAKCN5013BE20251" },
+  { label: "80G Registration", value: "AAKCN5013BF20261" },
+  { label: "NITI Aayog Darpan", value: "DL/2025/0692219" },
+  { label: "Udyam Registration", value: "UDYAM-DL-06-0187204" },
+  { label: "Date of Incorporation", value: "22 May 2025" },
+  { label: "Type", value: "Section 8 Not-for-Profit" },
 ];
 
 const committees = [
@@ -103,7 +103,7 @@ export default function GovernancePage() {
             </h2>
 
             <p className="mt-6 text-[16px] leading-8 text-[#5f514a]">
-              WAMMCO follows a governance model designed to protect community
+              NAMO Foundation follows a governance model designed to protect community
               interest, ensure responsible use of resources, and maintain
               transparency with donors, public institutions, partners, and the
               communities we serve.
@@ -124,7 +124,7 @@ export default function GovernancePage() {
             </h3>
 
             <p className="mt-5 text-[15px] leading-7 text-white/80">
-              Governance at WAMMCO is not limited to compliance. It is a daily
+              Governance at NAMO Foundation is not limited to compliance. It is a daily
               practice of stewardship, ethical decision-making, and public trust.
             </p>
           </div>
@@ -183,23 +183,30 @@ export default function GovernancePage() {
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {registrations.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-[8px] border border-[#e2c8bf] bg-[#fff8f5]/45 p-7 text-center"
-              >
-                <ShieldCheck className="mx-auto h-7 w-7 text-[#416754]" />
-
-                <h3 className="mt-6 font-heading text-[22px] font-medium text-[#130a06]">
-                  {item.title}
-                </h3>
-
-                <p className="mt-3 text-[14px] leading-6 text-[#675953]">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          <div className="grid gap-8 lg:grid-cols-2">
+            <div className="rounded-[8px] border border-[#e2c8bf] bg-[#fff8f5]/45 p-7">
+              <h3 className="font-heading text-[22px] font-medium text-[#130a06] mb-6">Corporate & Tax Registration</h3>
+              <ul className="space-y-4">
+                {corporateRegistrations.map((item) => (
+                  <li key={item.label} className="flex justify-between border-b border-[#e2c8bf]/50 pb-2">
+                    <span className="text-[#675953]">{item.label}</span>
+                    <span className="font-semibold text-[#130a06] text-right">{item.value}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="rounded-[8px] border border-[#e2c8bf] bg-[#fff8f5]/45 p-7">
+              <h3 className="font-heading text-[22px] font-medium text-[#130a06] mb-6">Regulatory Registrations</h3>
+              <ul className="space-y-4">
+                {regulatoryRegistrations.map((item) => (
+                  <li key={item.label} className="flex justify-between border-b border-[#e2c8bf]/50 pb-2">
+                    <span className="text-[#675953]">{item.label}</span>
+                    <span className="font-semibold text-[#130a06] text-right">{item.value}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>

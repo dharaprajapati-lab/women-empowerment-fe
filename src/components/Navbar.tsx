@@ -47,6 +47,7 @@ const navItems = [
     children: [
       { label: "Reports", href: "/insights/reports" },
       { label: "Publications", href: "/insights/publications" },
+      { label: "Health Systems Accountability", href: "/insights/health-systems-accountability" },
       { label: "Blogs", href: "/insights/blogs" },
       { label: "Opinions", href: "/insights/opinions" },
       { label: "Videos", href: "/insights/videos" },

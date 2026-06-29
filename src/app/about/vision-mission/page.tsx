@@ -1,21 +1,21 @@
 import type { Metadata } from "next";
-import PageHeader from "@/components/PageHeader";
 import {
   ArrowRight,
   Compass,
-  Eye,
   Globe,
   Lightbulb,
   Quote,
-  Target,
+  Scale,
+  Settings,
   Users,
 } from "lucide-react";
 import Link from "next/link";
+import React from "react";
 
 export const metadata: Metadata = {
-  title: "Vision & Mission | WAMMCO",
+  title: "Vision & Mission | NAMO Foundation",
   description:
-    "Discover WAMMCO's vision for a just and equal world and the mission that guides our work.",
+    "Discover NAMO Foundation's vision for a just and equal world and the mission that guides our work.",
 };
 
 const pillars = [
@@ -50,75 +50,70 @@ const approach = [
 
 export default function VisionMissionPage() {
   return (
-    <div className="bg-[#fbf4f1] text-[#170d08]">
-      <PageHeader
-        title="Vision & Mission"
-        subtitle="The north star that guides our work, our partnerships, and our commitment to community-led transformation."
-        breadcrumbs={[
-          { label: "Home", href: "/" },
-          { label: "About Us", href: "/about" },
-          { label: "Vision & Mission" },
-        ]}
-      />
-
-      {/* Vision Mission Cards */}
-      <section className="px-5 py-24 sm:px-8">
-        <div className="mx-auto grid max-w-[1220px] gap-7 lg:grid-cols-2">
-          <div className="overflow-hidden rounded-[8px] border border-[#e2c8bf] bg-[#fff8f5]/45 shadow-sm">
-            <div className="h-2 bg-gradient-to-r from-[#9f2f1f] to-[#c97a45]" />
-
-            <div className="p-8 sm:p-10">
-              <div className="flex items-center gap-4">
-                <div className="flex h-13 w-13 items-center justify-center rounded-full bg-[#f8e5df] text-[#9f2f1f]">
-                  <Eye className="h-6 w-6" />
-                </div>
-
-                <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#9f2f1f]">
-                  Our Vision
-                </p>
-              </div>
-
-              <h2 className="mt-10 font-heading text-[32px] font-medium leading-tight tracking-[-0.035em] text-[#130a06] sm:text-[42px]">
-                A just, equitable, and inclusive world.
-              </h2>
-
-              <p className="mt-6 text-[17px] leading-8 text-[#5f514a]">
-                We envision a world where every woman and marginalized community
-                lives with dignity, agency, safety, and opportunity.
-              </p>
-            </div>
+    <div className="bg-[#fbf4f1] text-[#170d08] pb-24">
+      {/* Top Header & Vision/Mission Overlapping Cards */}
+      <div className="container mx-auto px-4 py-16 md:py-24 max-w-6xl">
+        <div className="relative mb-16 md:mb-12">
+          <div className="mb-8">
+            {/* <h3 className="text-[#c9921a] font-semibold tracking-widest uppercase text-sm mb-2">
+              Who We Are
+            </h3> */}
+            <h1 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-8">
+              Our Vision & Mission
+            </h1>
           </div>
 
-          <div className="overflow-hidden rounded-[8px] border border-[#e2c8bf] bg-[#fff8f5]/45 shadow-sm">
-            <div className="h-2 bg-gradient-to-r from-[#416754] to-[#c97a45]" />
+          {/* Logo / Icon Placeholder on the right */}
+          <div className="absolute top-0 right-0 hidden md:flex items-center justify-center bg-muted/30 border border-border/50 rounded-sm w-24 h-24">
+            <div className="relative w-full h-full flex items-center justify-center text-primary">
+              <Settings className="absolute w-24 h-24 opacity-20 text-[#0f2c59]" />
+              <Scale className="absolute w-12 h-12 text-[#c9921a]" />
+            </div>
+          </div>
+        </div>
 
-            <div className="p-8 sm:p-10">
-              <div className="flex items-center gap-4">
-                <div className="flex h-13 w-13 items-center justify-center rounded-full bg-[#e4f1df] text-[#416754]">
-                  <Target className="h-6 w-6" />
-                </div>
-
-                <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#416754]">
-                  Our Mission
-                </p>
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 relative items-start">
+          {/* Left Card - Vision */}
+          <div className="bg-[#fdf6eb] p-8 md:p-12 rounded-xl shadow-sm lg:w-[55%] z-20 relative border border-[#f0d4b8]">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="bg-[#c9921a] text-white p-3 rounded-full flex items-center justify-center">
+                <Lightbulb className="w-6 h-6" />
               </div>
+              <h3 className="text-[#c9921a] font-bold tracking-widest text-lg md:text-xl uppercase">
+                Our Vision
+              </h3>
+            </div>
+            <p className="text-[#8b4513] text-base md:text-[17px] leading-relaxed font-medium">
+              To advance equitable and evidence-based approaches in health & mental well-being, governance, and social development through research, policy innovation, and collaborative action. We envision responsive institutions and empowered communities where laws, policies, and public programmes are informed by both rigorous analysis and lived experiences, delivering meaningful, inclusive, and lasting public impact.
+            </p>
+          </div>
 
-              <h2 className="mt-10 font-heading text-[32px] font-medium leading-tight tracking-[-0.035em] text-[#130a06] sm:text-[42px]">
-                Enabling people to claim rights and lead dignified lives.
-              </h2>
-
-              <p className="mt-6 text-[17px] leading-8 text-[#5f514a]">
-                We support women and marginalized communities through integrated
-                programmes in livelihoods, public health, education, legal aid,
-                child protection, and policy advocacy.
+          {/* Right Card - Mission */}
+          <div className="bg-white p-8 md:p-12 lg:pl-32 xl:pl-40 rounded-xl shadow-lg border border-border/50 lg:w-[55%] lg:-ml-[10%] z-10 relative lg:mt-16">
+            <h3 className="text-[#c9921a] font-bold tracking-widest text-lg md:text-xl uppercase mb-6">
+              Our Mission
+            </h3>
+            <div className="space-y-6 text-[#5f514a] text-base md:text-[17px] leading-relaxed">
+              <p>
+                We are committed to advancing thoughtful and practical approaches to the health & mental health, legal, governance, and social challenges of our time. Through rigorous research, informed analysis, stakeholder engagement, and field-based interventions, we seek to strengthen public institutions, improve access to health and mental health services, enrich public discourse, and support the development of laws and policies that are responsive to the needs of society.
+              </p>
+              <p>
+                Guided by the belief that sustainable change is achieved when knowledge informs action and policy reflects lived realities, NAMO Foundation works to bridge research, implementation, and community engagement so that governance and public systems deliver tangible outcomes for the people it serve.
               </p>
             </div>
           </div>
         </div>
-      </section>
+
+        {/* Tagline */}
+        <div className="mt-16 md:mt-24 text-center">
+          <p className="text-[#c9921a] font-serif italic text-xl md:text-2xl font-bold">
+            Decoding Complexities. Delivering Impact.
+          </p>
+        </div>
+      </div>
 
       {/* Quote */}
-      <section className="bg-[#f8e5df] px-5 py-24 sm:px-8">
+      <section className="bg-[#f8e5df] px-5 py-24 sm:px-8 mt-12 lg:mt-24">
         <div className="mx-auto max-w-[980px] text-center">
           <Quote className="mx-auto h-8 w-8 text-[#9f2f1f]" />
 
@@ -128,7 +123,7 @@ export default function VisionMissionPage() {
           </h2>
 
           <p className="mt-8 text-[11px] font-bold uppercase tracking-[0.25em] text-[#9f2f1f]">
-            WAMMCO Foundation
+            NAMO Foundation
           </p>
         </div>
       </section>
