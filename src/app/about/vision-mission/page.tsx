@@ -105,11 +105,11 @@ export default function VisionMissionPage() {
         </div>
 
         {/* Tagline */}
-        <div className="mt-16 md:mt-24 text-center">
+        {/* <div className="mt-16 md:mt-24 text-center">
           <p className="text-[#c9921a] font-serif italic text-xl md:text-2xl font-bold">
             Decoding Complexities. Delivering Impact.
           </p>
-        </div>
+        </div> */}
       </div>
 
       {/* Quote */}

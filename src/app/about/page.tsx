@@ -41,11 +41,11 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <p className="text-[#c9921a] font-serif italic text-xl md:text-2xl font-bold">
             Decoding Complexities. Delivering Impact.
           </p>
-        </div>
+        </div> */}
       </div>
     </div>
   );

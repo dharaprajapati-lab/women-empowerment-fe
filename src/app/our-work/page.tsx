@@ -98,9 +98,9 @@ export default function OurWorkPage() {
             <h2 className="font-heading text-[36px] font-medium tracking-[-0.035em] text-[#130a06] sm:text-[44px]">
               Thematic Areas & Organisational Strengths
             </h2>
-            <p className="mt-4 text-[#9f2f1f] font-semibold italic text-[15px]">
+            {/* <p className="mt-4 text-[#9f2f1f] font-semibold italic text-[15px]">
               Decoding Complexities. Delivering Impact.
-            </p>
+            </p> */}
           </div>
 
           <div className="grid gap-16 lg:grid-cols-2">
