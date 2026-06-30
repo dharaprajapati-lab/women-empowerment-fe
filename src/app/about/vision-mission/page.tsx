@@ -64,12 +64,12 @@ export default function VisionMissionPage() {
           </div>
 
           {/* Logo / Icon Placeholder on the right */}
-          <div className="absolute top-0 right-0 hidden md:flex items-center justify-center bg-muted/30 border border-border/50 rounded-sm w-24 h-24">
+          {/* <div className="absolute top-0 right-0 hidden md:flex items-center justify-center bg-muted/30 border border-border/50 rounded-sm w-24 h-24">
             <div className="relative w-full h-full flex items-center justify-center text-primary">
               <Settings className="absolute w-24 h-24 opacity-20 text-[#0f2c59]" />
               <Scale className="absolute w-12 h-12 text-[#c9921a]" />
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-0 relative items-start">

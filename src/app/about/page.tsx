@@ -20,14 +20,14 @@ export default function AboutPage() {
         </div>
 
         {/* Logo / Icon Placeholder on the right */}
-        <div className="absolute top-0 right-0 hidden md:flex items-center justify-center bg-muted/30 border border-border/50 rounded-sm w-20 h-20 border border-red-200">
+        {/* <div className="absolute top-0 right-0 hidden md:flex items-center justify-center bg-muted/30 border border-border/50 rounded-sm w-20 h-20 border border-red-200">
           <div className="relative w-full h-full flex items-center justify-center text-primary">
             <Settings className="absolute w-20 h-20 opacity-20 text-[#0f2c59]" />
             <Scale className="absolute w-10 h-10 text-[#c9921a]" />
           </div>
-        </div>
+        </div> */}
 
-        <div className="bg-card text-card-foreground p-8 md:p-12 rounded-xl shadow-md border border-border/50 text-base md:text-lg leading-relaxed space-y-6">
+        <div className="bg-card text-card-foreground p-8 md:p-12 rounded-xl shadow-md border border-border/50 text-base md:text-md leading-relaxed space-y-6">
           <p>
             NAMO Foundation is an interdisciplinary think tank that transforms complex health & mental well being, governance, legal, and social challenges into practical, evidence-based pathways for lasting public impact. Through rigorous research, policy analysis, stakeholder engagement, and sustained field-based interventions, we at NAMO are dedicated to strengthen public institutions, improve access to health and mental health services, promote accountable governance, and support the effective implementation of laws, policies, and public programmes.
           </p>
