@@ -93,7 +93,7 @@ export default function GovernancePage() {
       />
 
       {/* Governance Intro */}
-      <section className="px-5 py-24 sm:px-8">
+      {/* <section className="px-5 py-24 sm:px-8">
         <div className="mx-auto grid max-w-[1220px] gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div>
             <div className="mb-5 h-[3px] w-16 rounded-full bg-gradient-to-r from-[#9f2f1f] to-[#c97a45]" />
@@ -129,44 +129,9 @@ export default function GovernancePage() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      {/* Principles */}
-      <section className="bg-[#f8e5df] px-5 py-24 sm:px-8">
-        <div className="mx-auto max-w-[1220px]">
-          <div className="mb-12 text-center">
-            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#9f2f1f]">
-              Governance Principles
-            </p>
-
-            <h2 className="mt-4 font-heading text-[36px] font-medium tracking-[-0.035em] text-[#130a06] sm:text-[44px]">
-              How We Stay Accountable
-            </h2>
-          </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {principles.map(({ icon: Icon, title, desc }) => (
-              <div
-                key={title}
-                className="rounded-[8px] border border-[#e2c8bf] bg-[#fff8f5]/50 p-7 transition-transform duration-300 hover:-translate-y-1"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fbf4f1] text-[#9f2f1f]">
-                  <Icon className="h-5 w-5" />
-                </div>
-
-                <h3 className="mt-7 font-heading text-[22px] font-medium text-[#130a06]">
-                  {title}
-                </h3>
-
-                <p className="mt-3 text-[14px] leading-6 text-[#675953]">
-                  {desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* Registrations */}
       <section className="px-5 py-24 sm:px-8">
         <div className="mx-auto max-w-[1220px]">
@@ -210,9 +175,45 @@ export default function GovernancePage() {
           </div>
         </div>
       </section>
+      {/* Principles */}
+      <section className="bg-[#f8e5df] px-5 py-24 sm:px-8">
+        <div className="mx-auto max-w-[1220px]">
+          <div className="mb-12 text-center">
+            <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#9f2f1f]">
+              Governance Principles
+            </p>
+
+            <h2 className="mt-4 font-heading text-[36px] font-medium tracking-[-0.035em] text-[#130a06] sm:text-[44px]">
+              How We Stay Accountable
+            </h2>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {principles.map(({ icon: Icon, title, desc }) => (
+              <div
+                key={title}
+                className="rounded-[8px] border border-[#e2c8bf] bg-[#fff8f5]/50 p-7 transition-transform duration-300 hover:-translate-y-1"
+              >
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#fbf4f1] text-[#9f2f1f]">
+                  <Icon className="h-5 w-5" />
+                </div>
+
+                <h3 className="mt-7 font-heading text-[22px] font-medium text-[#130a06]">
+                  {title}
+                </h3>
+
+                <p className="mt-3 text-[14px] leading-6 text-[#675953]">
+                  {desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Committees */}
-      <section className="bg-[#f8e5df] px-5 py-24 sm:px-8">
+      {/* <section className="bg-[#f8e5df] px-5 py-24 sm:px-8">
         <div className="mx-auto grid max-w-[1220px] gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#9f2f1f]">
@@ -253,10 +254,10 @@ export default function GovernancePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Reports CTA */}
-      <section className="px-5 py-24 sm:px-8">
+      {/* <section className="px-5 py-24 sm:px-8">
         <div className="mx-auto max-w-[950px] rounded-[8px] bg-[#416754] p-10 text-center text-white sm:p-14">
           <FileCheck2 className="mx-auto h-8 w-8 text-white/80" />
 
@@ -278,7 +279,7 @@ export default function GovernancePage() {
             <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }

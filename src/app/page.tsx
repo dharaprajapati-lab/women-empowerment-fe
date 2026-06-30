@@ -1,3 +1,5 @@
+
+"use client";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -69,8 +71,8 @@ export default function HomePage() {
     <div className="bg-[#fbf4f1] text-[#170d08]">
       {/* Hero */}
       <section className="border-b border-[#ead4cc]/50 bg-[#fbf4f1]">
-        <div className="mx-auto grid max-w-[1220px] items-center gap-14 px-5 py-16 sm:px-8 md:py-20 lg:grid-cols-[0.95fr_1.05fr] lg:py-24">
-          <div>
+        <div className="mx-auto grid max-w-[1220px] items-center gap-14 px-5 py-10 mt-20 sm:px-8 md:py-20 lg:grid-cols-[0.95fr_1.05fr] lg:py-24">
+          <div className="">
             <h1 className="max-w-[590px] text-[45px] font-bold leading-[0.98] tracking-[-0.04em] text-[#120a06] sm:text-[58px] lg:text-[68px]">
               Empowering Communities, Sustaining Impact
             </h1>
@@ -90,7 +92,7 @@ export default function HomePage() {
               </Link>
 
               <Link
-                href="/insights"
+                href="/insights/health-systems-accountability"
                 className="rounded-[4px] border border-[#b7a09a] px-7 py-3 text-[12px] font-semibold text-[#2a1a12] transition-colors hover:border-[#9f2f1f] hover:text-[#9f2f1f]"
               >
                 Read Insights
@@ -176,7 +178,7 @@ export default function HomePage() {
       </section>
 
       {/* Current Initiatives */}
-      <section className="bg-[#fbf4f1] px-5 pb-28 sm:px-8">
+      {/* <section className="bg-[#fbf4f1] px-5 pb-28 sm:px-8">
         <div className="mx-auto max-w-[1220px]">
           <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
@@ -297,10 +299,10 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Latest Insights */}
-      <section className="bg-[#f8e5df] px-5 py-24 sm:px-8 md:py-28">
+      {/* <section className="bg-[#f8e5df] px-5 py-24 sm:px-8 md:py-28">
         <div className="mx-auto max-w-[1220px]">
           <div className="mb-9">
             <h2 className="text-[30px] font-medium tracking-[-0.025em] text-[#140b07]">
@@ -375,7 +377,8 @@ export default function HomePage() {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
+
       {/* Partnerships */}
       <section className="bg-white px-5 py-24 sm:px-8 md:py-28">
         <div className="mx-auto max-w-[1220px]">

@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Women Empowerment & Community Development",
+  title: "Netweon for Access to Justice & Multidisciplinary Outreach Foundation",
   description:
     "Empowering women and communities through sustainable development, education, healthcare, and livelihood programs across India.",
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "public health",
   ],
   openGraph: {
-    title: "Women - Women Empowerment & Community Development",
+    title: "Netweon for Access to Justice & Multidisciplinary Outreach Foundation",
     description:
       "Empowering women and communities through sustainable development, education, healthcare, and livelihood programs.",
     type: "website",

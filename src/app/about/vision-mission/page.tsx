@@ -50,11 +50,11 @@ const approach = [
 
 export default function VisionMissionPage() {
   return (
-    <div className="bg-[#fbf4f1] text-[#170d08] pb-24">
+    <div className="bg-[#fbf4f1] text-[#170d08]">
       {/* Top Header & Vision/Mission Overlapping Cards */}
       <div className="container mx-auto px-4 py-16 md:py-24 max-w-6xl">
-        <div className="relative mb-16 md:mb-12">
-          <div className="mb-8">
+        <div className="relative mb-8 md:mb-8">
+          <div className="mb-8 mt-4">
             {/* <h3 className="text-[#c9921a] font-semibold tracking-widest uppercase text-sm mb-2">
               Who We Are
             </h3> */}
@@ -113,7 +113,7 @@ export default function VisionMissionPage() {
       </div>
 
       {/* Quote */}
-      <section className="bg-[#f8e5df] px-5 py-24 sm:px-8 mt-12 lg:mt-24">
+      {/* <section className="bg-[#f8e5df] px-5 py-24 sm:px-8 mt-12 lg:mt-24">
         <div className="mx-auto max-w-[980px] text-center">
           <Quote className="mx-auto h-8 w-8 text-[#9f2f1f]" />
 
@@ -126,10 +126,10 @@ export default function VisionMissionPage() {
             NAMO Foundation
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* Pillars */}
-      <section className="px-5 py-24 sm:px-8">
+      {/* <section className="px-5 py-24 sm:px-8">
         <div className="mx-auto max-w-[1220px]">
           <div className="mx-auto mb-12 max-w-[720px] text-center">
             <div className="mx-auto mb-5 h-[3px] w-16 rounded-full bg-gradient-to-r from-[#9f2f1f] to-[#c97a45]" />
@@ -165,10 +165,10 @@ export default function VisionMissionPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Approach */}
-      <section className="bg-[#f8e5df] px-5 py-24 sm:px-8">
+      {/* <section className="bg-[#f8e5df] px-5 py-24 sm:px-8">
         <div className="mx-auto grid max-w-[1220px] gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-[#9f2f1f]">
@@ -211,7 +211,7 @@ export default function VisionMissionPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
